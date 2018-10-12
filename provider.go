@@ -28,6 +28,9 @@ func Provider() *schema.Provider {
 		ResourcesMap: map[string]*schema.Resource{
 			"itop_virtual_machine": resourceVirtualMachine(),
 		},
+		DataSourcesMap: map[string]*schema.Resource{
+			"itop_environment": dataSourceEnvironment(),
+		},
 		ConfigureFunc: providerConfigure,
 	}
 }
