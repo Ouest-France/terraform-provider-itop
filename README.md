@@ -1,12 +1,12 @@
 # `terraform-provider-itop`
 
-A [Terraform][1] plugin for managing [Itop][2].
+A [Terraform][1] plugin for managing [iTop][2].
 
 ## Contents
 
 * [Installation](#installation)
 * [`itop` Provider](#provider-configuration)
-* [Data Sources](#data sources)
+* [DataSources](#datasources)
   * [`itop_environment`](#itop_environment)
   * [`itop_organization`](#itop_organization)
 * [Resources](#resources)
@@ -39,7 +39,7 @@ provider "itop" {
 | `password`          | itop password              | `Required` |
 
 
-## Data Sources
+## DataSources
 ### `itop_environment`
 
 A datasource to get environment attributes.
