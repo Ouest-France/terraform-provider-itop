@@ -22,6 +22,7 @@ func Provider() *schema.Provider {
 			"password": &schema.Schema{
 				Type:        schema.TypeString,
 				Required:    true,
+				Sensitive:   true,
 				Description: "itop password",
 			},
 		},
@@ -31,6 +32,7 @@ func Provider() *schema.Provider {
 		DataSourcesMap: map[string]*schema.Resource{
 			"itop_environment":  dataSourceEnvironment(),
 			"itop_organization": dataSourceOrganization(),
+			"itop_cluster":      dataSourceCluster(),
 		},
 		ConfigureFunc: providerConfigure,
 	}
