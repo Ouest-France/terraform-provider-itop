@@ -1,7 +1,7 @@
 module github.com/Ouest-France/terraform-provider-itop
 
 require (
-	github.com/Ouest-France/goitop v0.1.0
+	github.com/Ouest-France/goitop v0.2.0
 	github.com/apparentlymart/go-cidr v1.0.0 // indirect
 	github.com/aws/aws-sdk-go v1.15.53 // indirect
 	github.com/bgentry/go-netrc v0.0.0-20140422174119-9fd32a8b3d3d // indirect
@@ -24,6 +24,6 @@ require (
 	github.com/mitchellh/mapstructure v1.1.2 // indirect
 	github.com/ulikunitz/xz v0.5.4 // indirect
 	github.com/zclconf/go-cty v0.0.0-20181011210859-1f835aab79c2 // indirect
-	golang.org/x/crypto v0.0.0-20181009213950-7c1a557ab941 // indirect
+	golang.org/x/crypto v0.0.0-20181012144002-a92615f3c490 // indirect
 	golang.org/x/net v0.0.0-20181011144130-49bb7cea24b1 // indirect
 )

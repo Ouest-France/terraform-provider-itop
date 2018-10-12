@@ -1,6 +1,6 @@
 github.com/DHowett/go-plist v0.0.0-20180609054337-500bd5b9081b/go.mod h1:5paT5ZDrOm8eAJPem2Bd+q3FTi3Gxm/U4tb2tH8YIUQ=
-github.com/Ouest-France/goitop v0.1.0 h1:XQheuFlvxqGMdtnBgQ/OK31HmXPiPN17uJAAlBue4Ew=
-github.com/Ouest-France/goitop v0.1.0/go.mod h1:SmbdS0CC8zz3uzxg8L9Jw0VSvFXNcT6GvCtYw2o4/QY=
+github.com/Ouest-France/goitop v0.2.0 h1:/j5Te7mbgur674TiCTdsaQRfJeIo8ExnuBqLr08MQc0=
+github.com/Ouest-France/goitop v0.2.0/go.mod h1:SmbdS0CC8zz3uzxg8L9Jw0VSvFXNcT6GvCtYw2o4/QY=
 github.com/agext/levenshtein v1.2.1 h1:QmvMAjj2aEICytGiWzmxoE0x2KZvE0fvmqMOfy2tjT8=
 github.com/agext/levenshtein v1.2.1/go.mod h1:JEDfjyjHDjOF/1e4FlBE/PkbqA9OfWu2ki2W0IB5558=
 github.com/apparentlymart/go-cidr v1.0.0 h1:lGDvXx8Lv9QHjrAVP7jyzleG4F9+FkRhJcEsDFxeb8w=
@@ -100,8 +100,8 @@ github.com/zclconf/go-cty v0.0.0-20180815031001-58bb2bc0302a/go.mod h1:xnAOWiHeO
 github.com/zclconf/go-cty v0.0.0-20181011210859-1f835aab79c2 h1:vOb6S596sqp7hz0aJi/teF8yClMDYgCnPh+GLGtk+hE=
 github.com/zclconf/go-cty v0.0.0-20181011210859-1f835aab79c2/go.mod h1:xnAOWiHeOqg2nWS62VtQ7pbOu17FtxJNW8RLEih+O3s=
 golang.org/x/crypto v0.0.0-20180816225734-aabede6cba87/go.mod h1:6SG95UA2DQfeDnfUPMdvaQW0Q7yPrPDi9nlGo2tz2b4=
-golang.org/x/crypto v0.0.0-20181009213950-7c1a557ab941 h1:qBTHLajHecfu+xzRI9PqVDcqx7SdHj9d4B+EzSn3tAc=
-golang.org/x/crypto v0.0.0-20181009213950-7c1a557ab941/go.mod h1:6SG95UA2DQfeDnfUPMdvaQW0Q7yPrPDi9nlGo2tz2b4=
+golang.org/x/crypto v0.0.0-20181012144002-a92615f3c490 h1:va0qYsIOza3Nlf2IncFyOql4/3XUq3vfge/Ad64bhlM=
+golang.org/x/crypto v0.0.0-20181012144002-a92615f3c490/go.mod h1:6SG95UA2DQfeDnfUPMdvaQW0Q7yPrPDi9nlGo2tz2b4=
 golang.org/x/net v0.0.0-20180811021610-c39426892332/go.mod h1:mL1N/T3taQHkDXs73rZJwtUhF3w3ftmwwsq0BUmARs4=
 golang.org/x/net v0.0.0-20180826012351-8a410e7b638d/go.mod h1:mL1N/T3taQHkDXs73rZJwtUhF3w3ftmwwsq0BUmARs4=
 golang.org/x/net v0.0.0-20181011144130-49bb7cea24b1 h1:Y/KGZSOdz/2r0WJ9Mkmz6NJBusp0kiNx1Cn82lzJQ6w=
