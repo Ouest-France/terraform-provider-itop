@@ -1,8 +1,9 @@
-module gitlab.com/pablo-ruth/terraform-provider-itop
+module github.com/Ouest-France/terraform-provider-itop
 
 require (
+	github.com/Ouest-France/goitop v0.1.0
 	github.com/apparentlymart/go-cidr v1.0.0 // indirect
-	github.com/aws/aws-sdk-go v1.15.51 // indirect
+	github.com/aws/aws-sdk-go v1.15.53 // indirect
 	github.com/bgentry/go-netrc v0.0.0-20140422174119-9fd32a8b3d3d // indirect
 	github.com/blang/semver v3.5.1+incompatible // indirect
 	github.com/hashicorp/go-cleanhttp v0.5.0 // indirect
@@ -19,11 +20,10 @@ require (
 	github.com/mitchellh/cli v1.0.0 // indirect
 	github.com/mitchellh/copystructure v1.0.0 // indirect
 	github.com/mitchellh/go-homedir v1.0.0 // indirect
-	github.com/mitchellh/go-testing-interface v1.0.0 // indirect
 	github.com/mitchellh/hashstructure v1.0.0 // indirect
 	github.com/mitchellh/mapstructure v1.1.2 // indirect
 	github.com/ulikunitz/xz v0.5.4 // indirect
-	github.com/zclconf/go-cty v0.0.0-20180925180032-d9b87d891d0b // indirect
+	github.com/zclconf/go-cty v0.0.0-20181011210859-1f835aab79c2 // indirect
 	golang.org/x/crypto v0.0.0-20181009213950-7c1a557ab941 // indirect
-	golang.org/x/net v0.0.0-20181005035420-146acd28ed58 // indirect
+	golang.org/x/net v0.0.0-20181011144130-49bb7cea24b1 // indirect
 )
