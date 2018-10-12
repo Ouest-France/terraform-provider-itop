@@ -1,4 +1,4 @@
-package main
+package itop
 
 import (
 	"github.com/Ouest-France/goitop"

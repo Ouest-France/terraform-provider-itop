@@ -1,28 +1,28 @@
-package main
+package itop
 
 import (
 	"github.com/Ouest-France/goitop"
 	"github.com/hashicorp/terraform/helper/schema"
 )
 
-func dataSourceEnvironment() *schema.Resource {
+func dataSourceOrganization() *schema.Resource {
 	return &schema.Resource{
-		Read: dataSourceEnvironmentRead,
+		Read: dataSourceOrganizationRead,
 
 		Schema: map[string]*schema.Schema{
 			"name": &schema.Schema{
 				Type:        schema.TypeString,
 				Required:    true,
-				Description: "Environment name",
+				Description: "Organization name",
 			},
 		},
 	}
 }
 
-func dataSourceEnvironmentRead(d *schema.ResourceData, m interface{}) error {
+func dataSourceOrganizationRead(d *schema.ResourceData, m interface{}) error {
 	client := m.(*goitop.Client)
 
-	id, err := client.GetEnvironment(d.Get("name").(string))
+	id, err := client.GetOrganization(d.Get("name").(string))
 	if err != nil {
 		return err
 	}
