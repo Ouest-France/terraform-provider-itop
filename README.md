@@ -9,6 +9,7 @@ A [Terraform][1] plugin for managing [iTop][2].
 * [DataSources](#datasources)
   * [`itop_environment`](#itop_environment)
   * [`itop_organization`](#itop_organization)
+  * [`itop_cluster`](#itop_cluster)
 * [Resources](#resources)
   * [`itop_virtual_machine`](#itop_virtual_machine)
 * [Requirements](#requirements)
@@ -89,6 +90,38 @@ data "itop_organization" "org" {
 }
 ```
 
+
+### `itop_cluster`
+
+A datasource to get cluster attributes.
+
+#### Example
+
+```hcl
+provider "itop" {
+  address  = "https://itop.mydomain.tld"
+  user     = "itop_user"
+  password = "itop_password"
+}
+
+data "itop_cluster" "prod" {
+  name   = "Production"
+}
+```
+
+
+#### Arguments
+
+| Property             | Description                                    |
+| ----------------     | -----------------------                        |
+| `name`               | The name of the environment                    |
+
+#### Attributes
+
+| Property             | Description                                    |
+| ----------------     | -----------------------                        |
+| `id`                 | The id of the environment                      |
+
 #### Arguments
 
 | Property             | Description                                    |
@@ -133,11 +166,12 @@ resource "itop_virtual_machine" "vm" {
 
 #### Arguments
 
-| Property             | Description                                    |
-| ----------------     | -----------------------                        |
-| `name`               | The name of the virtual machine                |
-| `org_id`             | The organization id of the virtual machine     |
-| `env_id`             | The environment id of the virtual machine      |
+| Property             | Description                                    | Default    |
+| ----------------     | -----------------------                        | `Required` |
+| `name`               | The name of the virtual machine                | `Required` |
+| `org_id`             | The organization id of the virtual machine     | `Required` |
+| `env_id`             | The environment id of the virtual machine      | `Required` |
+| `cluster_id`         | The cluster id of the virtual machine          | `0`        |
 
 #### Attributes
 
