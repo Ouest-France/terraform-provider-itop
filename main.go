@@ -1,7 +1,7 @@
 package main
 
 import (
-	"Ouest-France/terraform-provider-itop/itop"
+	"github.com/Ouest-France/terraform-provider-itop/itop"
 
 	"github.com/hashicorp/terraform/plugin"
 	"github.com/hashicorp/terraform/terraform"
