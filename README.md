@@ -10,6 +10,7 @@ A [Terraform][1] plugin for managing [iTop][2].
   * [`itop_environment`](#itop_environment)
   * [`itop_organization`](#itop_organization)
   * [`itop_cluster`](#itop_cluster)
+  * [`itop_exploitationservice`](#itop_exploitationservice)
 * [Resources](#resources)
   * [`itop_virtual_machine`](#itop_virtual_machine)
 * [Requirements](#requirements)
@@ -70,6 +71,37 @@ data "itop_environment" "env" {
 | Property             | Description                                    |
 | ----------------     | -----------------------                        |
 | `id`                 | The id of the environment                      |
+
+
+### `itop_exploitationservice`
+
+A datasource to get exploitation service attributes.
+
+#### Example
+
+```hcl
+provider "itop" {
+  address  = "https://itop.mydomain.tld"
+  user     = "itop_user"
+  password = "itop_password"
+}
+
+data "itop_exploitationservice" "myservice" {
+  name   = "myservice"
+}
+```
+
+#### Arguments
+
+| Property             | Description                                    |
+| ----------------     | -----------------------                        |
+| `name`               | The name of the exploitation service           |
+
+#### Attributes
+
+| Property             | Description                                    |
+| ----------------     | -----------------------                        |
+| `id`                 | The id of the exploitation service             |
 
 
 ### `itop_organization`
@@ -166,12 +198,13 @@ resource "itop_virtual_machine" "vm" {
 
 #### Arguments
 
-| Property             | Description                                    | Default    |
-| ----------------     | -----------------------                        | `Required` |
-| `name`               | The name of the virtual machine                | `Required` |
-| `org_id`             | The organization id of the virtual machine     | `Required` |
-| `env_id`             | The environment id of the virtual machine      | `Required` |
-| `cluster_id`         | The cluster id of the virtual machine          | `0`        |
+| Property                 | Description                                        | Default    |
+| ----------------         | -----------------------                            | `Required` |
+| `name`                   | The name of the virtual machine                    | `Required` |
+| `org_id`                 | The organization id of the virtual machine         | `Required` |
+| `env_id`                 | The environment id of the virtual machine          | `Required` |
+| `cluster_id`             | The cluster id of the virtual machine              | `0`        |
+| `exploitationservice_id` | The exploitation service id of the virtual machine | `0`        |
 
 #### Attributes
 
