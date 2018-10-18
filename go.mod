@@ -1,7 +1,7 @@
 module github.com/Ouest-France/terraform-provider-itop
 
 require (
-	github.com/Ouest-France/goitop v0.2.0
+	github.com/Ouest-France/goitop v0.3.0
 	github.com/apparentlymart/go-cidr v1.0.0 // indirect
 	github.com/aws/aws-sdk-go v1.15.53 // indirect
 	github.com/bgentry/go-netrc v0.0.0-20140422174119-9fd32a8b3d3d // indirect

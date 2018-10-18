@@ -34,6 +34,12 @@ func resourceVirtualMachine() *schema.Resource {
 				Default:     "0",
 				Description: "Cluster ID",
 			},
+			"exploitationservice_id": &schema.Schema{
+				Type:        schema.TypeString,
+				Optional:    true,
+				Default:     "0",
+				Description: "Exploitation Service ID",
+			},
 		},
 	}
 }
@@ -46,6 +52,7 @@ func resourceVirtualMachineCreate(d *schema.ResourceData, m interface{}) error {
 		d.Get("org_id").(string),
 		d.Get("env_id").(string),
 		d.Get("cluster_id").(string),
+		d.Get("exploitationservice_id").(string),
 	)
 	if err != nil {
 		return err
@@ -69,6 +76,7 @@ func resourceVirtualMachineRead(d *schema.ResourceData, m interface{}) error {
 	d.Set("org_id", vm.OrgID)
 	d.Set("env_id", vm.EnvID)
 	d.Set("cluster_id", vm.ClusterID)
+	d.Set("exploitationservice_id", vm.ExploitationServiceID)
 
 	return nil
 }
@@ -82,6 +90,7 @@ func resourceVirtualMachineUpdate(d *schema.ResourceData, m interface{}) error {
 		d.Get("org_id").(string),
 		d.Get("env_id").(string),
 		d.Get("cluster_id").(string),
+		d.Get("exploitationservice_id").(string),
 	)
 	return err
 }

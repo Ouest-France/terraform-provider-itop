@@ -1,6 +1,8 @@
 github.com/DHowett/go-plist v0.0.0-20180609054337-500bd5b9081b/go.mod h1:5paT5ZDrOm8eAJPem2Bd+q3FTi3Gxm/U4tb2tH8YIUQ=
 github.com/Ouest-France/goitop v0.2.0 h1:/j5Te7mbgur674TiCTdsaQRfJeIo8ExnuBqLr08MQc0=
 github.com/Ouest-France/goitop v0.2.0/go.mod h1:SmbdS0CC8zz3uzxg8L9Jw0VSvFXNcT6GvCtYw2o4/QY=
+github.com/Ouest-France/goitop v0.3.0 h1:4/OWw3u8isbUl47KN2wURBlQ4/eW8vOQGKR0k53iL+k=
+github.com/Ouest-France/goitop v0.3.0/go.mod h1:SmbdS0CC8zz3uzxg8L9Jw0VSvFXNcT6GvCtYw2o4/QY=
 github.com/agext/levenshtein v1.2.1 h1:QmvMAjj2aEICytGiWzmxoE0x2KZvE0fvmqMOfy2tjT8=
 github.com/agext/levenshtein v1.2.1/go.mod h1:JEDfjyjHDjOF/1e4FlBE/PkbqA9OfWu2ki2W0IB5558=
 github.com/apparentlymart/go-cidr v1.0.0 h1:lGDvXx8Lv9QHjrAVP7jyzleG4F9+FkRhJcEsDFxeb8w=
