@@ -11,6 +11,7 @@ A [Terraform][1] plugin for managing [iTop][2].
   * [`itop_organization`](#itop_organization)
   * [`itop_cluster`](#itop_cluster)
   * [`itop_exploitationservice`](#itop_exploitationservice)
+  * [`itop_backup`](#itop_backup)
 * [Resources](#resources)
   * [`itop_virtual_machine`](#itop_virtual_machine)
 * [Requirements](#requirements)
@@ -102,6 +103,37 @@ data "itop_exploitationservice" "myservice" {
 | Property             | Description                                    |
 | ----------------     | -----------------------                        |
 | `id`                 | The id of the exploitation service             |
+
+
+### `itop_backup`
+
+A datasource to get backup link attributes.
+
+#### Example
+
+```hcl
+provider "itop" {
+  address  = "https://itop.mydomain.tld"
+  user     = "itop_user"
+  password = "itop_password"
+}
+
+data "itop_backup" "rubrik" {
+  name   = "rubrik"
+}
+```
+
+#### Arguments
+
+| Property             | Description                                    |
+| ----------------     | -----------------------                        |
+| `name`               | The name of the backup link                    |
+
+#### Attributes
+
+| Property             | Description                                    |
+| ----------------     | -----------------------                        |
+| `id`                 | The id of the backup link                      |
 
 
 ### `itop_organization`
@@ -205,6 +237,8 @@ resource "itop_virtual_machine" "vm" {
 | `env_id`                 | The environment id of the virtual machine          | `Required` |
 | `cluster_id`             | The cluster id of the virtual machine              | `0`        |
 | `exploitationservice_id` | The exploitation service id of the virtual machine | `0`        |
+| `backup`                 | Backup enable status of the virtual machine        | `false`    |
+| `backup_id`              | The backup link id of the virtual machine          | `0`        |
 
 #### Attributes
 
