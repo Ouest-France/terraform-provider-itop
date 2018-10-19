@@ -40,6 +40,18 @@ func resourceVirtualMachine() *schema.Resource {
 				Default:     "0",
 				Description: "Exploitation Service ID",
 			},
+			"backup": &schema.Schema{
+				Type:        schema.TypeBool,
+				Optional:    true,
+				Default:     false,
+				Description: "Backup state",
+			},
+			"backup_id": &schema.Schema{
+				Type:        schema.TypeString,
+				Optional:    true,
+				Default:     "0",
+				Description: "Backup ID",
+			},
 		},
 	}
 }
@@ -47,12 +59,21 @@ func resourceVirtualMachine() *schema.Resource {
 func resourceVirtualMachineCreate(d *schema.ResourceData, m interface{}) error {
 	client := m.(*goitop.Client)
 
+	var backup string
+	if d.Get("backup").(bool) {
+		backup = "yes"
+	} else {
+		backup = "no"
+	}
+
 	id, err := client.CreateVM(
 		d.Get("name").(string),
 		d.Get("org_id").(string),
 		d.Get("env_id").(string),
 		d.Get("cluster_id").(string),
 		d.Get("exploitationservice_id").(string),
+		backup,
+		d.Get("backup_id").(string),
 	)
 	if err != nil {
 		return err
@@ -77,12 +98,26 @@ func resourceVirtualMachineRead(d *schema.ResourceData, m interface{}) error {
 	d.Set("env_id", vm.EnvID)
 	d.Set("cluster_id", vm.ClusterID)
 	d.Set("exploitationservice_id", vm.ExploitationServiceID)
+	d.Set("backup_id", vm.BackupID)
+
+	if vm.Backup == "yes" {
+		d.Set("backup", true)
+	} else {
+		d.Set("backup", false)
+	}
 
 	return nil
 }
 
 func resourceVirtualMachineUpdate(d *schema.ResourceData, m interface{}) error {
 	client := m.(*goitop.Client)
+
+	var backup string
+	if d.Get("backup").(bool) {
+		backup = "yes"
+	} else {
+		backup = "no"
+	}
 
 	err := client.UpdateVM(
 		d.Id(),
@@ -91,6 +126,8 @@ func resourceVirtualMachineUpdate(d *schema.ResourceData, m interface{}) error {
 		d.Get("env_id").(string),
 		d.Get("cluster_id").(string),
 		d.Get("exploitationservice_id").(string),
+		backup,
+		d.Get("backup_id").(string),
 	)
 	return err
 }

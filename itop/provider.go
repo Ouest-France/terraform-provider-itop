@@ -34,6 +34,7 @@ func Provider() *schema.Provider {
 			"itop_organization":        dataSourceOrganization(),
 			"itop_cluster":             dataSourceCluster(),
 			"itop_exploitationservice": dataSourceExploitationService(),
+			"itop_backup":              dataSourceBackup(),
 		},
 		ConfigureFunc: providerConfigure,
 	}
