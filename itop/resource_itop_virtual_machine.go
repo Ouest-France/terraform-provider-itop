@@ -93,17 +93,26 @@ func resourceVirtualMachineRead(d *schema.ResourceData, m interface{}) error {
 
 	d.SetId(vm.ID)
 
-	d.Set("name", vm.Name)
-	d.Set("org_id", vm.OrgID)
-	d.Set("env_id", vm.EnvID)
-	d.Set("cluster_id", vm.ClusterID)
-	d.Set("exploitationservice_id", vm.ExploitationServiceID)
-	d.Set("backup_id", vm.BackupID)
+	fields := map[string]interface{}{
+		"name":                   vm.Name,
+		"org_id":                 vm.OrgID,
+		"env_id":                 vm.EnvID,
+		"cluster_id":             vm.ClusterID,
+		"exploitationservice_id": vm.ExploitationServiceID,
+		"backup_id":              vm.BackupID,
+	}
 
 	if vm.Backup == "yes" {
-		d.Set("backup", true)
+		fields["backup"] = true
 	} else {
-		d.Set("backup", false)
+		fields["backup"] = false
+	}
+
+	for field, value := range fields {
+		err = d.Set(field, value)
+		if err != nil {
+			return err
+		}
 	}
 
 	return nil
