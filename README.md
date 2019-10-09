@@ -231,7 +231,7 @@ resource "itop_virtual_machine" "vm" {
 #### Arguments
 
 | Property                 | Description                                        | Default    |
-| ----------------         | -----------------------                            | `Required` |
+| ----------------         | -----------------------                            | ---------- |
 | `name`                   | The name of the virtual machine                    | `Required` |
 | `org_id`                 | The organization id of the virtual machine         | `Required` |
 | `env_id`                 | The environment id of the virtual machine          | `Required` |
