@@ -239,6 +239,7 @@ resource "itop_virtual_machine" "vm" {
 | `exploitationservice_id` | The exploitation service id of the virtual machine | `0`        |
 | `backup`                 | Backup enable status of the virtual machine        | `false`    |
 | `backup_id`              | The backup link id of the virtual machine          | `0`        |
+| `description`            | Description                                        | ``         |
 
 #### Attributes
 
