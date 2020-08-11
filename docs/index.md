@@ -8,7 +8,7 @@ The iTop provider is used to interact with the resources supported by [iTop](htt
 # Provider configuration
 terraform {
   required_providers {
-    fortiadc = {
+    itop = {
       source  = "Ouest-France/itop"
     }
   }
