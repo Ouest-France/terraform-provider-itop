@@ -4,5 +4,5 @@ go 1.12
 
 require (
 	github.com/Ouest-France/goitop v0.4.1
-	github.com/hashicorp/terraform v0.14.2
+	github.com/hashicorp/terraform v0.14.3
 )
