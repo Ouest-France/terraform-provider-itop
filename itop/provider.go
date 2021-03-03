@@ -2,7 +2,7 @@ package itop
 
 import (
 	"github.com/Ouest-France/goitop"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 )
 
 // Provider returns a terraform.ResourceProvider.
